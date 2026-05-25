@@ -1,12 +1,14 @@
 import type { CSSProperties } from 'react'
 import {
   earlyBelieverQuotes,
-  earlyBelieversCurrentCount,
   earlyBelieversGoal,
   earlyBelieversMode,
 } from '../content/earlyBelievers'
+import { useEarlyAccessCount } from '../hooks/useEarlyAccessCount'
 
 export function EarlyBelievers() {
+  const earlyBelieversCurrentCount = useEarlyAccessCount()
+
   if (earlyBelieversMode === 'quotes') {
     return (
       <section className="section-believers container">
