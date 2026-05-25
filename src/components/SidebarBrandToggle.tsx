@@ -48,11 +48,11 @@ export default function SidebarBrandToggle({ expanded, onToggle }: Props) {
     >
       <span className="sidebar-brand-spin" onAnimationEnd={handleAnimationEnd}>
         <img
-          src="/favicon.svg"
+          src="/logo-mark.svg"
           alt=""
           className="sidebar-brand-icon"
-          width={56}
-          height={54}
+          width={40}
+          height={40}
           draggable={false}
         />
       </span>

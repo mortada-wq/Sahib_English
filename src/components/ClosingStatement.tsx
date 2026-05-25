@@ -12,11 +12,11 @@ export function ClosingStatement() {
       aria-label="Closing statement"
     >
       <img
-        src="/sahib-logo.svg"
-        alt="Sahib"
+        src="/logo-mark.svg"
+        alt=""
         className="closing-logo"
-        width={96}
-        height={96}
+        width={68}
+        height={67}
       />
       <p className="closing-line-en">
         The Arabic world has been waiting for this.

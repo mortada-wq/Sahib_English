@@ -1,6 +1,6 @@
 # Sahib English
 
-English-language shell for the Sahib brand — Vite + React landing with a collapsible glass sidebar.
+English marketing site for Sahib (**esahib.com**) — Vite + React landing. **Launch App** points to the live product at **sahib.cc**.
 
 Recovered from local Cursor session history and wired as a standalone repo (not the Arabic-first [`mortada-wq/sahib`](https://github.com/mortada-wq/sahib) monorepo).
 

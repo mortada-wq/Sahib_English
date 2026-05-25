@@ -28,11 +28,11 @@ export default function Sidebar({ children }: Props) {
 
           {expanded && (
             <img
-              src="/sahib-logo.svg"
+              src="/logo-hero.svg"
               alt="Sahib"
               className="sidebar-wordmark"
-              width={180}
-              height={66}
+              width={220}
+              height={115}
             />
           )}
         </div>

@@ -1,6 +1,6 @@
 # Sahib — English Marketing Design System (LTR)
 
-> **Scope:** English marketing surface for [sahib.cc](https://sahib.cc) (e.g. `e.sahib.chat`).  
+> **Scope:** English marketing surface at [esahib.com](https://esahib.com). The live product app is [sahib.cc](https://sahib.cc).  
 > **Source of truth for shared brand:** [`../sahib/design.md`](../sahib/design.md) — read that file for the full Sahib palette, motion, glass language, logos, and component DNA. **Do not edit the Arabic product repo** when building English; it stays **RTL** and Arabic-first.  
 > **When this file and `../sahib/design.md` disagree on colors, radii, or motion, the Arabic system document wins** — then align English CSS to match.
 
@@ -11,7 +11,7 @@
 | Surface | Repo / path | Direction | Language | Role |
 |---------|-------------|-----------|----------|------|
 | **Arabic product** | `../sahib` | `dir="rtl"` | Arabic (MSA / Iraqi context in-product) | Live app at **sahib.cc** — chat, sidebar, prompt bar |
-| **English marketing** | `Sahib English` (this repo) | `dir="ltr"` | English | Landing, waitlist, positioning — **same night canvas and blues/orange, LTR layout only** |
+| **English marketing** | `Sahib English` (this repo) | `dir="ltr"` | English | **esahib.com** — landing, waitlist, positioning; **Launch App → sahib.cc** |
 
 Both must feel like one company: same matte dark canvas (`#2E3035`), same blue logo gradients, same orange stroke discipline, same glass panels, same calm premium tone. Only **reading direction, alignment, and English copy** change here.
 
@@ -196,7 +196,7 @@ These are **in scope for this repo**. Full chat sidebar, agility horses, and pro
 
 ### 9.1 Site header
 
-- **Logo:** top-**left**, ~**32px** height, light/wordmark asset (`public/logo-header.svg` or layered `logo-back` + `logo-front` from Arabic `assets/`).
+- **Logo:** top-**left**, compact mark (`public/logo-mark.svg`), ~**40px** height.
 - **Launch App:** top-**right**, `.glass` pill, links to **https://sahib.cc**.
 - Sticky optional; hairline or glass bar on `--bg-base`.
 
@@ -206,7 +206,7 @@ Two columns on desktop (stack on narrow viewports):
 
 | Column | Content |
 |--------|---------|
-| **Left** | Headline (Muna Black), subhead (`--fg-3`), waitlist form |
+| **Left** | Master wordmark (`public/logo-hero.svg`), tagline, subhead (`--fg-3`), waitlist form |
 | **Right** | Floating `.glass` chat snippet (preview) |
 
 **Waitlist shell**
@@ -247,8 +247,8 @@ Sahib English/
 ├── design.md          ← this file (LTR marketing spec)
 ├── index.html         ← lang="en" dir="ltr"
 ├── public/
-│   ├── logo-header.svg
-│   ├── sahib-logo.svg
+│   ├── logo-hero.svg
+│   ├── logo-mark.svg
 │   ├── favicon.svg
 │   └── icons.svg
 └── src/

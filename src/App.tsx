@@ -1,4 +1,5 @@
 import './App.css'
+import { appUrl, contactEmail, marketingSiteUrl } from './content/site'
 import { ChatTeaser } from './components/ChatTeaser'
 import { ClosingStatement } from './components/ClosingStatement'
 import { EarlyBelievers } from './components/EarlyBelievers'
@@ -10,11 +11,11 @@ export default function App() {
     <div className="landing" dir="ltr" lang="en">
       <header className="site-header">
         <a href="/" className="header-logo" aria-label="Sahib home">
-          <img src="/logo-header.svg" alt="Sahib" width={90} height={32} />
+          <img src="/logo-mark.svg" alt="" width={40} height={40} />
         </a>
         <a
           className="btn-launch glass"
-          href="https://sahib.cc"
+          href={appUrl}
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -25,11 +26,18 @@ export default function App() {
       <main>
         <section className="hero container">
           <div className="hero-left">
-            <h1 className="hero-headline">
-              The Intelligent Companion
-              <br />
-              for the Arabic World.
-            </h1>
+            <div className="hero-brand">
+              <img
+                src="/logo-hero.svg"
+                alt="Sahib"
+                className="hero-logo"
+                width={287}
+                height={150}
+              />
+              <h1 className="hero-tagline">
+                The Intelligent Companion for the Arabic World.
+              </h1>
+            </div>
             <p className="hero-subhead">
               Bridge the gap between heritage and high-tech with the first AI
               designed for the Iraqi context.
@@ -84,12 +92,13 @@ export default function App() {
       <footer className="site-footer container">
         <div>
           © 2026 Sahib ·{' '}
-          <a href="https://sahib.cc" target="_blank" rel="noopener noreferrer">
-            sahib.cc
+          <a href={marketingSiteUrl} target="_blank" rel="noopener noreferrer">
+            esahib.com
           </a>
         </div>
         <div>
-          Contact: <a href="mailto:sahib@sahib.cc">sahib@sahib.cc</a>
+          Contact:{' '}
+          <a href={`mailto:${contactEmail}`}>{contactEmail}</a>
         </div>
       </footer>
     </div>

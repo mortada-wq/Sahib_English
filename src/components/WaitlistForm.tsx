@@ -88,11 +88,11 @@ export function WaitlistForm() {
         aria-hidden={!isConfirmed}
       >
         <img
-          src="/sahib-logo.svg"
+          src="/logo-mark.svg"
           alt=""
           className="waitlist-confirm-logo"
-          width={48}
-          height={48}
+          width={40}
+          height={40}
         />
         <p className="waitlist-confirm-ar" dir="rtl" lang="ar">
           صاحب ينتظرك

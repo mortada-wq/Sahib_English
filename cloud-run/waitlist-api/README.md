@@ -23,7 +23,7 @@ VITE_WAITLIST_API_URL=https://YOUR-SERVICE-XXXX.run.app/waitlist
 | `MAILCHIMP_API_KEY` | yes | `xxxxxxxx-us21` |
 | `MAILCHIMP_LIST_ID` | yes | audience ID from Mailchimp |
 | `MAILCHIMP_SERVER` | yes | `us21` (from API key suffix) |
-| `CORS_ORIGINS` | yes (prod) | `https://e.sahib.chat,http://localhost:5173` |
+| `CORS_ORIGINS` | yes (prod) | `https://esahib.com,http://localhost:5173` |
 | `MAILCHIMP_STATUS` | no | `subscribed` (default) or `pending` for double opt-in |
 | `PORT` | no | Cloud Run sets `8080` |
 
@@ -51,7 +51,7 @@ gcloud run deploy "$SERVICE" \
   --source . \
   --region "$REGION" \
   --allow-unauthenticated \
-  --set-env-vars "MAILCHIMP_SERVER=us21,MAILCHIMP_LIST_ID=YOUR_LIST_ID,CORS_ORIGINS=https://your-marketing-domain.com,http://localhost:5173" \
+  --set-env-vars "MAILCHIMP_SERVER=us21,MAILCHIMP_LIST_ID=YOUR_LIST_ID,CORS_ORIGINS=https://esahib.com,http://localhost:5173" \
   --set-secrets "MAILCHIMP_API_KEY=mailchimp-api-key:latest"
 ```
 
