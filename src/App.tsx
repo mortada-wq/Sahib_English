@@ -3,7 +3,6 @@ import './App.css'
 import { ChatTeaser } from './components/ChatTeaser'
 import { ClosingStatement } from './components/ClosingStatement'
 import { EarlyBelievers } from './components/EarlyBelievers'
-import { WaitlistForm } from './components/WaitlistForm'
 import { contactEmail, marketingSiteUrl } from './content/site'
 import { useEarlyAccessCount } from './hooks/useEarlyAccessCount'
 
