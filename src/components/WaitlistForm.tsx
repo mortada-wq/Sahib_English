@@ -1,5 +1,6 @@
 import { useEffect, useState, type FormEvent } from 'react'
 import { subscribeWaitlist } from '../lib/waitlist'
+import { marketingSiteUrl } from '../content/site'
 
 type WaitlistState = 'idle' | 'submitting' | 'confirmed' | 'error'
 
@@ -9,12 +10,19 @@ export function WaitlistForm() {
   const [state, setState] = useState<WaitlistState>('idle')
   const [errorMessage, setErrorMessage] = useState('')
   const [showFollowUp, setShowFollowUp] = useState(false)
+  const [shareCopied, setShareCopied] = useState(false)
 
   useEffect(() => {
     if (state !== 'confirmed') return
     const t = window.setTimeout(() => setShowFollowUp(true), CONFIRM_HOLD_MS)
     return () => window.clearTimeout(t)
   }, [state])
+
+  useEffect(() => {
+    if (!shareCopied) return
+    const timer = window.setTimeout(() => setShareCopied(false), 2000)
+    return () => window.clearTimeout(timer)
+  }, [shareCopied])
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -26,6 +34,7 @@ export function WaitlistForm() {
 
     setState('submitting')
     setErrorMessage('')
+    setShareCopied(false)
 
     const result = await subscribeWaitlist(email.trim())
     if (!result.ok) {
@@ -39,6 +48,16 @@ export function WaitlistForm() {
 
   const isConfirmed = state === 'confirmed'
   const isSubmitting = state === 'submitting'
+
+  async function handleShareClick() {
+    const referralUrl = `${marketingSiteUrl}?ref=founding-circle`
+    try {
+      await navigator.clipboard.writeText(referralUrl)
+      setShareCopied(true)
+    } catch {
+      setShareCopied(false)
+    }
+  }
 
   return (
     <form
@@ -98,7 +117,19 @@ export function WaitlistForm() {
           صاحب ينتظرك
         </p>
         {showFollowUp ? (
-          <p className="waitlist-confirm-en">You&apos;re on the early access list.</p>
+          <div className="waitlist-referral">
+            <p className="waitlist-confirm-en">
+              You&apos;re on the early access list. Share Sahib to move your
+              people up with you.
+            </p>
+            <button
+              type="button"
+              className="waitlist-share-btn"
+              onClick={handleShareClick}
+            >
+              {shareCopied ? 'Link copied' : 'Copy invite link'}
+            </button>
+          </div>
         ) : null}
       </div>
 
