@@ -919,18 +919,6 @@
   color: var(--fg-3);
 }
 
-.gateway-waitlist {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.gateway-waitlist h2 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 500;
-}
-
 /* ========== THESIS PAGE ========== */
 .thesis-grid {
   display: grid;
