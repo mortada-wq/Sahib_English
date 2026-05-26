@@ -25,16 +25,6 @@ export default function Sidebar({ children }: Props) {
             expanded={expanded}
             onToggle={() => setExpanded((open) => !open)}
           />
-
-          {expanded && (
-            <img
-              src="/logo-hero.svg"
-              alt="Sahib"
-              className="sidebar-wordmark"
-              width={220}
-              height={115}
-            />
-          )}
         </div>
 
         <nav className="sidebar-nav" aria-label="Sections">
