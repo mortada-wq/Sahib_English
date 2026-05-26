@@ -1,5 +1,8 @@
 :root {
   --bg-base: #2e3035;
+  /** Auth / brand-mark vignette — center navy, edge master grey */
+  --bg-master-grey: #0f1113;
+  --bg-auth-navy: #1e293b;
   --bg-surface: #3c3f47;
   --bg-elevated: #41444b;
   --fg-1: #ffffff;
@@ -53,7 +56,12 @@ body {
   font-size: 14px;
   line-height: 1.6;
   color: var(--fg-1);
-  background: var(--bg-base);
+  background-color: var(--bg-master-grey);
+  background-image: radial-gradient(
+    ellipse 90% 80% at 50% 42%,
+    var(--bg-auth-navy) 0%,
+    var(--bg-master-grey) 100%
+  );
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
