@@ -137,7 +137,11 @@ export default function App() {
   }
 
   return (
-    <div className="landing investor-layout" dir="ltr" lang="en">
+    <div
+      className={`landing investor-layout${page === 'gateway' ? ' is-gateway-viewport' : ''}`}
+      dir="ltr"
+      lang="en"
+    >
       <aside className="page-sidebar glass" aria-label="Page navigation">
         <button
           type="button"
@@ -183,48 +187,55 @@ export default function App() {
       <div className="page-content">
         <main className="page-stage">
           {page === 'gateway' ? (
-            <section className="page-panel">
-              <header className="gateway-hero">
-                <GatewayLogo className="gateway-logo" />
-                <h1 className="gateway-tagline">
-                  The Arab world has been waiting for this.
-                </h1>
-                <p className="gateway-tagline-ar" dir="rtl" lang="ar">
-                  العالم العربي ينتظر هذا.
-                </p>
-                <p className="gateway-subline">
-                  Iraqi-first AI that learns from people, protects dialect, and
-                  proves intelligence through cultural accuracy.
-                </p>
+            <section className="page-panel gateway-panel">
+              <div className="gateway-screen">
+                <div className="gateway-column gateway-column-left">
+                  <header className="gateway-hero">
+                    <div className="gateway-brand-row">
+                      <GatewayLogo className="gateway-logo" />
+                      <h1 className="gateway-tagline">
+                        The Arab world has been waiting for this.
+                      </h1>
+                    </div>
+                    <p className="gateway-tagline-ar" dir="rtl" lang="ar">
+                      العالم العربي ينتظر هذا.
+                    </p>
+                    <p className="gateway-subline">
+                      Iraqi-first AI that learns from people, protects dialect,
+                      and proves intelligence through cultural accuracy.
+                    </p>
 
-                <div className="hero-cta-row">
-                  <a
-                    href={`mailto:${contactEmail}?subject=Request%20Access%20to%20Sahib`}
-                    className="hero-cta glass"
-                  >
-                    Request Access
-                  </a>
-                  <button
-                    type="button"
-                    className="hero-cta glass"
-                    onClick={() => jumpTo('war-room')}
-                  >
-                    The Round Is Open
-                  </button>
+                    <div className="hero-cta-row">
+                      <a
+                        href={`mailto:${contactEmail}?subject=Request%20Access%20to%20Sahib`}
+                        className="hero-cta glass"
+                      >
+                        Request Access
+                      </a>
+                      <button
+                        type="button"
+                        className="hero-cta glass"
+                        onClick={() => jumpTo('war-room')}
+                      >
+                        The Round Is Open
+                      </button>
+                    </div>
+                  </header>
+
+                  <article className="gateway-counter gateway-counter--inline glass">
+                    <h2>Join the first 100</h2>
+                    <p className="counter-number">{earlyAccessCount}/100</p>
+                    <p>
+                      Founders, creators, and families are already lining up for
+                      the founding cohort.
+                    </p>
+                  </article>
                 </div>
-              </header>
 
-              <section className="gateway-proof-grid">
-                <ChatTeaser />
-                <article className="gateway-counter glass">
-                  <h2>Join the first 100</h2>
-                  <p className="counter-number">{earlyAccessCount}/100</p>
-                  <p>
-                    Founders, creators, and families are already lining up for
-                    the founding cohort.
-                  </p>
-                </article>
-              </section>
+                <div className="gateway-column gateway-column-right">
+                  <ChatTeaser />
+                </div>
+              </div>
             </section>
           ) : null}
 
