@@ -144,14 +144,16 @@ export default function App() {
       lang="en"
     >
       <aside className="page-sidebar glass" aria-label="Page navigation">
-        <button
-          type="button"
-          className="sidebar-master"
-          onClick={() => jumpTo('gateway')}
-          aria-label="Go to gateway page"
-        >
-          <img src="/logo-mark.svg" alt="" width={44} height={44} />
-        </button>
+        <div className="sidebar-top">
+          <button
+            type="button"
+            className="sidebar-master"
+            onClick={() => jumpTo('gateway')}
+            aria-label="Go to gateway page"
+          >
+            <img src="/logo-mark.svg" alt="" width={44} height={44} />
+          </button>
+        </div>
 
         <nav className="page-nav" aria-label="Marketing pages">
           {PAGE_ITEMS.map((item) => (
@@ -207,27 +209,29 @@ export default function App() {
                       and proves intelligence through cultural accuracy.
                     </p>
 
-                    <div className="hero-cta-row">
-                      <a
-                        href={`mailto:${contactEmail}?subject=Request%20Access%20to%20Sahib`}
-                        className="hero-cta glass"
-                      >
-                        Request Access
-                      </a>
-                      <button
-                        type="button"
-                        className="hero-cta glass"
-                        onClick={() => jumpTo('war-room')}
-                      >
-                        The Round Is Open
-                      </button>
+                    <div className="gateway-hero-foot">
+                      <div className="hero-cta-row">
+                        <a
+                          href={`mailto:${contactEmail}?subject=Request%20Access%20to%20Sahib`}
+                          className="hero-cta glass"
+                        >
+                          Request Access
+                        </a>
+                        <button
+                          type="button"
+                          className="hero-cta glass"
+                          onClick={() => jumpTo('war-room')}
+                        >
+                          The Round Is Open
+                        </button>
+                      </div>
+
+                      <article className="gateway-counter glass" aria-label="Early access progress">
+                        <p className="gateway-counter-label">Join the first 100</p>
+                        <p className="counter-number">{earlyAccessCount}/100</p>
+                      </article>
                     </div>
                   </header>
-
-                  <article className="gateway-counter gateway-counter--inline glass">
-                    <h2>Join the first 100</h2>
-                    <p className="counter-number">{earlyAccessCount}/100</p>
-                  </article>
                 </div>
 
                 <div className="gateway-column gateway-column-right">

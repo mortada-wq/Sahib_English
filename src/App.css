@@ -738,8 +738,15 @@
   border-bottom: none;
   display: flex;
   flex-direction: column;
-  gap: var(--space-3);
+  gap: 0;
   padding: var(--space-3);
+}
+
+.sidebar-top {
+  flex-shrink: 0;
+  padding-bottom: var(--space-3);
+  margin-bottom: var(--space-2);
+  border-bottom: 1px solid var(--stroke-1);
 }
 
 .sidebar-master {
@@ -759,18 +766,13 @@
   display: block;
 }
 
-.sidebar-mission {
-  margin: 0;
-  font-size: 13px;
-  line-height: 1.5;
-  color: var(--fg-3);
-  max-width: 26ch;
-}
-
 .page-nav {
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
+  padding-block: var(--space-1);
 }
 
 .page-nav-item {
@@ -800,7 +802,10 @@
 }
 
 .sidebar-actions {
+  flex-shrink: 0;
   margin-top: auto;
+  padding-top: var(--space-3);
+  border-top: 1px solid var(--stroke-1);
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -891,7 +896,7 @@
 .gateway-column-left {
   display: flex;
   flex-direction: column;
-  gap: clamp(10px, 1.6vh, 18px);
+  justify-content: center;
   min-height: 0;
   overflow: hidden;
 }
@@ -942,10 +947,19 @@
   line-height: 1.5;
 }
 
+.gateway-hero-foot {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: var(--space-2);
+  margin-top: clamp(4px, 0.8vh, 10px);
+}
+
 .hero-cta-row {
   display: flex;
   gap: var(--space-2);
   flex-wrap: wrap;
+  flex: 1 1 auto;
 }
 
 .hero-cta {
@@ -961,70 +975,30 @@
   justify-content: center;
 }
 
-.gateway-meta-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-end;
-  gap: var(--space-2);
-}
-
 .gateway-counter {
+  flex: 0 0 auto;
   border-radius: var(--radius-card);
-  padding: var(--space-3);
+  padding: 10px 14px;
   display: flex;
   flex-direction: column;
-  gap: var(--space-2);
+  align-items: flex-start;
+  gap: 2px;
+  min-width: 120px;
 }
 
-.gateway-counter--inline {
-  flex: 1 1 180px;
-  padding: var(--space-2);
-  gap: 6px;
-}
-
-.gateway-counter h2 {
+.gateway-counter-label {
   margin: 0;
-  font-size: 18px;
-}
-
-.gateway-counter--inline h2 {
-  font-size: 13px;
+  font-size: 12px;
   font-weight: 500;
   color: var(--fg-3);
+  line-height: 1.3;
 }
 
 .counter-number {
   margin: 0;
-  font-size: 46px;
+  font-size: clamp(22px, 3vw, 28px);
   line-height: 1;
   font-weight: 700;
-}
-
-.gateway-counter--inline .counter-number {
-  font-size: clamp(26px, 3.5vw, 34px);
-}
-
-.gateway-counter p {
-  margin: 0;
-  color: var(--fg-3);
-}
-
-.gateway-waitlist {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.gateway-waitlist--compact {
-  flex: 1 1 240px;
-  gap: 0;
-  min-width: min(100%, 260px);
-}
-
-.gateway-waitlist h2 {
-  margin: 0;
-  font-size: 18px;
-  font-weight: 500;
 }
 
 /* ========== THESIS PAGE ========== */
