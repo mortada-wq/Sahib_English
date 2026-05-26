@@ -12,7 +12,7 @@ export type ChatPhase =
   | 'typing'
   | 'done'
 
-const TYPE_MS = 36
+const TYPE_MS = 28
 const CURSOR_MS = 1500
 
 export function useChatTeaserSequence(inView: boolean) {

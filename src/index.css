@@ -48,6 +48,13 @@ body,
   min-height: 100%;
 }
 
+html:has(.is-gateway-viewport),
+html:has(.is-gateway-viewport) body,
+html:has(.is-gateway-viewport) #root {
+  height: 100%;
+  overflow: hidden;
+}
+
 body {
   font-family: var(--font-en);
   font-size: 14px;

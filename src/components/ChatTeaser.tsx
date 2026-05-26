@@ -23,7 +23,9 @@ export function ChatTeaser() {
       ref={ref}
       className="chat-teaser glass"
       data-phase={phase}
-      aria-label="Chat preview"
+      dir="rtl"
+      lang="ar"
+      aria-label="Iraqi Arabic chat preview"
       aria-live="polite"
     >
       <div

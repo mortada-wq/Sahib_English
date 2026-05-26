@@ -1,5 +1,5 @@
-export const CHAT_USER_MESSAGE = 'Who are you?'
+export const CHAT_USER_MESSAGE =
+  'هلو صاحب، صدك تكدر تفهم كلامنا العراقي لو بس فصحى؟'
 
-/** Stops mid-sentence — implies Sahib is still thinking. */
 export const CHAT_ASSISTANT_REPLY =
-  "I'm Sahib — built for Iraqi Arabic and the way you actually speak, not just—"
+  'هلا بيك عيوني! افهمك واصل وفصل. اني مبني علمود اسولف وياك مثل ما تحجي وية صاحبك.. شلون اكدر اساعدك اليوم؟'
