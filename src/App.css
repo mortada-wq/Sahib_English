@@ -911,8 +911,10 @@
 }
 
 .gateway-logo {
-  width: min(100%, clamp(168px, 20vw, 232px));
+  width: min(100%, 158px);
   height: auto;
+  aspect-ratio: 158 / 83;
+  display: block;
 }
 
 .gateway-tagline {

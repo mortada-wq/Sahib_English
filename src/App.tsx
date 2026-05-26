@@ -197,8 +197,8 @@ export default function App() {
                       src="/logo-hero.svg"
                       alt="Sahib"
                       className="gateway-logo"
-                      width={287}
-                      height={150}
+                      width={158}
+                      height={83}
                     />
                     <h1 className="gateway-tagline">
                       The Arab world has been waiting for this.
