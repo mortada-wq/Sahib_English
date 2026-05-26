@@ -152,9 +152,6 @@ export default function App() {
         >
           <img src="/logo-mark.svg" alt="" width={44} height={44} />
         </button>
-        <p className="sidebar-mission">
-          The Arab world has been waiting for this.
-        </p>
 
         <nav className="page-nav" aria-label="Marketing pages">
           {PAGE_ITEMS.map((item) => (
@@ -227,18 +224,10 @@ export default function App() {
                     </div>
                   </header>
 
-                  <div className="gateway-meta-row">
-                    <article className="gateway-counter gateway-counter--inline glass">
-                      <h2>Join the first 100</h2>
-                      <p className="counter-number">{earlyAccessCount}/100</p>
-                    </article>
-                    <section
-                      className="gateway-waitlist gateway-waitlist--compact"
-                      aria-label="Early access waitlist"
-                    >
-                      <WaitlistForm />
-                    </section>
-                  </div>
+                  <article className="gateway-counter gateway-counter--inline glass">
+                    <h2>Join the first 100</h2>
+                    <p className="counter-number">{earlyAccessCount}/100</p>
+                  </article>
                 </div>
 
                 <div className="gateway-column gateway-column-right">
