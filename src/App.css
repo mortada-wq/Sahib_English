@@ -913,7 +913,7 @@
 
 .gateway-logo {
   flex-shrink: 0;
-  width: min(100%, clamp(140px, 18vw, 220px));
+  width: clamp(240px, 32vw, 320px);
   height: auto;
 }
 
@@ -921,7 +921,7 @@
   margin: 0;
   flex: 1;
   min-width: 0;
-  font-size: clamp(20px, 2.6vw, 36px);
+  font-size: clamp(22px, 3vw, 40px);
   line-height: 1.08;
   font-family: var(--font-brand);
   font-weight: 900;
