@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import './App.css'
 import { ChatTeaser } from './components/ChatTeaser'
+import { GatewayLogo } from './components/GatewayLogo'
 import { ClosingStatement } from './components/ClosingStatement'
 import { EarlyBelievers } from './components/EarlyBelievers'
 import { WaitlistForm } from './components/WaitlistForm'
@@ -185,13 +186,7 @@ export default function App() {
           {page === 'gateway' ? (
             <section className="page-panel">
               <header className="gateway-hero">
-                <img
-                  src="/logo-hero.svg"
-                  alt="Sahib"
-                  className="gateway-logo"
-                  width={287}
-                  height={150}
-                />
+                <GatewayLogo className="gateway-logo" />
                 <h1 className="gateway-tagline">
                   The Arab world has been waiting for this.
                 </h1>
