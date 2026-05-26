@@ -146,7 +146,6 @@ export default function App() {
           aria-label="Go to gateway page"
         >
           <img src="/logo-mark.svg" alt="" width={44} height={44} />
-          <span>Sahib</span>
         </button>
         <p className="sidebar-mission">
           The Arab world has been waiting for this.
