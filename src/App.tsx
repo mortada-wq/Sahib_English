@@ -1,6 +1,7 @@
 import { useEffect, useMemo, useState, type FormEvent } from 'react'
 import './App.css'
 import { ChatTeaser } from './components/ChatTeaser'
+import { GatewayLogo } from './components/GatewayLogo'
 import { ClosingStatement } from './components/ClosingStatement'
 import { EarlyBelievers } from './components/EarlyBelievers'
 import { contactEmail, marketingSiteUrl } from './content/site'
@@ -191,16 +192,12 @@ export default function App() {
               <div className="gateway-screen">
                 <div className="gateway-column gateway-column-left">
                   <header className="gateway-hero">
-                    <img
-                      src="/logo-hero.svg"
-                      alt="Sahib"
-                      className="gateway-logo"
-                      width={158}
-                      height={83}
-                    />
-                    <h1 className="gateway-tagline">
-                      The Arab world has been waiting for this.
-                    </h1>
+                    <div className="gateway-brand-row">
+                      <GatewayLogo className="gateway-logo" />
+                      <h1 className="gateway-tagline">
+                        The Arab world has been waiting for this.
+                      </h1>
+                    </div>
                     <p className="gateway-tagline-ar" dir="rtl" lang="ar">
                       العالم العربي ينتظر هذا.
                     </p>
@@ -209,29 +206,31 @@ export default function App() {
                       and proves intelligence through cultural accuracy.
                     </p>
 
-                    <div className="gateway-hero-foot">
-                      <div className="hero-cta-row">
-                        <a
-                          href={`mailto:${contactEmail}?subject=Request%20Access%20to%20Sahib`}
-                          className="hero-cta glass"
-                        >
-                          Request Access
-                        </a>
-                        <button
-                          type="button"
-                          className="hero-cta glass"
-                          onClick={() => jumpTo('war-room')}
-                        >
-                          The Round Is Open
-                        </button>
-                      </div>
-
-                      <article className="gateway-counter glass" aria-label="Early access progress">
-                        <p className="gateway-counter-label">Join the first 100</p>
-                        <p className="counter-number">{earlyAccessCount}/100</p>
-                      </article>
+                    <div className="hero-cta-row">
+                      <a
+                        href={`mailto:${contactEmail}?subject=Request%20Access%20to%20Sahib`}
+                        className="hero-cta glass"
+                      >
+                        Request Access
+                      </a>
+                      <button
+                        type="button"
+                        className="hero-cta glass"
+                        onClick={() => jumpTo('war-room')}
+                      >
+                        The Round Is Open
+                      </button>
                     </div>
                   </header>
+
+                  <article className="gateway-counter gateway-counter--inline glass">
+                    <h2>Join the first 100</h2>
+                    <p className="counter-number">{earlyAccessCount}/100</p>
+                    <p>
+                      Founders, creators, and families are already lining up for
+                      the founding cohort.
+                    </p>
+                  </article>
                 </div>
 
                 <div className="gateway-column gateway-column-right">

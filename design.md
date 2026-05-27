@@ -47,7 +47,9 @@ Use the **same hex values** as `../sahib/design.md` §3. English CSS may expose 
 
 | Arabic token (`../sahib`) | English marketing alias | Value | Notes |
 |---------------------------|-------------------------|-------|--------|
-| `--canvas-bg` | `--bg-base` | `#2E3035` | Page background — dominant matte canvas |
+| `--canvas-bg` | `--bg-base` | `#2E3035` | Cards, panels, legacy flat canvas |
+| — | `--bg-master-grey` | `#0F1113` | Auth / page vignette **edges** (master grey) |
+| — | `--bg-auth-navy` | `#1E293B` | Auth / page vignette **center** (deep muted navy) |
 | `--surface-2` | `--bg-surface` | `#3C3F47` | Cards, elevated panels |
 | `--surface-3` / hairline surfaces | `--bg-elevated` | `#41444B` | Skeleton bars, subtle elevation |
 | `--text-primary` | `--fg-1` | `#FFFFFF` | Headlines, primary body on dark |
@@ -94,7 +96,25 @@ Same treatment as Arabic night UI and `../sahib` glass surfaces:
 }
 ```
 
-Use for: header “Launch App” pill, waitlist shell, floating chat teaser, feature cards. **Not** for full-page backgrounds — canvas stays `--bg-base`.
+Use for: header “Launch App” pill, waitlist shell, floating chat teaser, feature cards. **Not** for full-page backgrounds — page canvas uses the auth vignette below.
+
+### 4.1 Auth / brand-mark page background (birds)
+
+Full-viewport radial vignette behind the logo mark (“birds”) and auth-style surfaces:
+
+- **Center:** `#1E293B` (`--bg-auth-navy`) — deep muted navy
+- **Edges:** `#0F1113` (`--bg-master-grey`) — master grey
+
+```css
+background-color: var(--bg-master-grey);
+background-image: radial-gradient(
+  ellipse 90% 80% at 50% 42%,
+  var(--bg-auth-navy) 0%,
+  var(--bg-master-grey) 100%
+);
+```
+
+Glass panels and cards still use `--bg-base` / surfaces — they float on top of this vignette.
 
 ---
 
