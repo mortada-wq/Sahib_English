@@ -192,15 +192,12 @@ export default function App() {
               <div className="gateway-screen">
                 <div className="gateway-column gateway-column-left">
                   <header className="gateway-hero">
-                    <div className="gateway-brand-row">
-                      <GatewayLogo className="gateway-logo" />
-                      <h1 className="gateway-tagline">
-                        The Arab world has been waiting for this.
-                      </h1>
-                    </div>
-                    <p className="gateway-tagline-ar" dir="rtl" lang="ar">
+                    <GatewayLogo className="gateway-logo" />
+                    
+                    <h1 className="gateway-tagline-ar" dir="rtl" lang="ar">
                       العالم العربي ينتظر هذا.
-                    </p>
+                    </h1>
+                    
                     <p className="gateway-subline">
                       Iraqi-first AI that learns from people, protects dialect,
                       and proves intelligence through cultural accuracy.
