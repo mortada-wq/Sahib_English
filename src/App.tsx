@@ -88,7 +88,9 @@ export default function App() {
 
   function jumpTo(target: PageId) {
     setPage(target)
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (target !== 'gateway') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
   }
 
   function handleWarRoomSubmit(event: FormEvent<HTMLFormElement>) {
@@ -143,17 +145,16 @@ export default function App() {
       lang="en"
     >
       <aside className="page-sidebar glass" aria-label="Page navigation">
-        <button
-          type="button"
-          className="sidebar-master"
-          onClick={() => jumpTo('gateway')}
-          aria-label="Go to gateway page"
-        >
-          <img src="/logo-mark.svg" alt="" width={44} height={44} />
-        </button>
-        <p className="sidebar-mission">
-          The Arab world has been waiting for this.
-        </p>
+        <div className="sidebar-top">
+          <button
+            type="button"
+            className="sidebar-master"
+            onClick={() => jumpTo('gateway')}
+            aria-label="Go to gateway page"
+          >
+            <img src="/logo-mark.svg" alt="" width={44} height={44} />
+          </button>
+        </div>
 
         <nav className="page-nav" aria-label="Marketing pages">
           {PAGE_ITEMS.map((item) => (
